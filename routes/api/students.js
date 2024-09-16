@@ -47,6 +47,7 @@ router.get('/:id',(req,res) => {
             console.log("successfully connected to mongo");      
             const id = parseInt(req.params.id);
             const db = database.db('student');
+            const db1 = database.db('student');
             const student = db.collection('student');
             student.findOne({id: id}, (err,result)=>{
                 if(err){
